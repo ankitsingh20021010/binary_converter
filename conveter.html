@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Binary Converter</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#0f172a;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.container{
+background:#1e293b;
+padding:40px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,0,0,0.5);
+}
+
+input{
+padding:10px;
+width:200px;
+border:none;
+border-radius:5px;
+margin:10px;
+}
+
+button{
+padding:10px 20px;
+border:none;
+border-radius:6px;
+background:#22c55e;
+color:white;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#16a34a;
+}
+
+.result{
+margin-top:20px;
+font-size:20px;
+color:#38bdf8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Decimal to Binary Converter</h2>
+
+<input type="number" id="number" placeholder="Enter Decimal Number">
+
+<br>
+
+<button onclick="convert()">Convert</button>
+
+<div class="result" id="output"></div>
+
+</div>
+
+<script>
+
+function convert(){
+
+let num=document.getElementById("number").value
+
+if(num===""){
+document.getElementById("output").innerHTML="Enter a number"
+return
+}
+
+let binary=parseInt(num).toString(2)
+
+document.getElementById("output").innerHTML=
+"Binary: "+binary
+
+}
+
+</script>
+
+</body>
+</html>
